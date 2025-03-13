@@ -215,7 +215,6 @@ public class Btap {
         if (indexDelete == -1) {
             System.err.println("Không tồn tại sách có mã " + id);
         } else {
-            //Thực hiện xóa
             for (int i = indexDelete; i < countBook; i++) {
                 arrBook[i] = arrBook[i + 1];
             }
