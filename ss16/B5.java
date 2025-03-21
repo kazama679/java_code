@@ -13,15 +13,20 @@ public class B5 {
         numbers.add(4);
         numbers.add(1);
         numbers.add(5);
-
-        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
-        for (int num : numbers) {
-            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
-        }
-
         System.out.println("Số lần xuất hiện của từng phần tử:");
-        for (int key : frequencyMap.keySet()) {
-            System.out.println(key + " - " + frequencyMap.get(key) + " lần");
+        ArrayList<Integer> counted = new ArrayList<>();
+        for (int i = 0; i < numbers.size(); i++) {
+            int num = numbers.get(i);
+            if (!counted.contains(num)) {
+                int count = 0;
+                for (int j = 0; j < numbers.size(); j++) {
+                    if (numbers.get(j) == num) {
+                        count++;
+                    }
+                }
+                System.out.println(num + " - " + count + " lần");
+                counted.add(num); 
+            }
         }
     }
 }
