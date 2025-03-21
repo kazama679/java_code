@@ -1,7 +1,6 @@
 package ss16;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class B5 {
     public static void main(String[] args) {
