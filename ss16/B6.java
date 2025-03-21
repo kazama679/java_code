@@ -1,7 +1,6 @@
 package ss16;
 
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
 
 public class B6 {
     public static void main(String[] args) {
@@ -16,8 +15,13 @@ public class B6 {
         ArrayList<Integer> uniqueNumbers = removeDuplicates(numbers);
         System.out.println("Danh sách sau khi loại bỏ trùng lặp: " + uniqueNumbers);
     }
-
     public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> list) {
-        return new ArrayList<>(new LinkedHashSet<>(list));
+        ArrayList<Integer> uniqueList = new ArrayList<>();
+        for (int num : list) {
+            if (!uniqueList.contains(num)) {
+                uniqueList.add(num);
+            }
+        }
+        return uniqueList;
     }
 }
