@@ -1,29 +1,23 @@
 package ss17;
 
 import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class B6 {
     public static void main(String[] args) {
-//        Viết chương trình java thực hiện các yêu cầu sau:
-//
-//        Tạo hai HashSet:
-//        Set1: Chứa các số nguyên {10, 20, 30, 40}
-//        Set2: Chứa các số nguyên {30, 40, 50, 60}
-//        Tìm giao của hai HashSet và in ra các phần tử giao nhau (điểm chung của 2 collection set)
-//        Sắp xếp các phần tử theo thứ tự tăng dần
-//        Đáp số: [30,40]
-
-        HashSet<Integer> setHashSet = new HashSet<>();
+        Set<Integer> setHashSet = new HashSet<>();
         setHashSet.add(10);
         setHashSet.add(20);
         setHashSet.add(30);
         setHashSet.add(40);
-        HashSet<Integer> setHashSet2 = new HashSet<>();
-        setHashSet.add(30);
-        setHashSet.add(40);
-        setHashSet.add(50);
-        setHashSet.add(60);
-
-        
+        Set<Integer> setHashSet2 = new HashSet<>();
+        setHashSet2.add(30);
+        setHashSet2.add(40);
+        setHashSet2.add(50);
+        setHashSet2.add(60);
+        setHashSet.retainAll(setHashSet2);
+        TreeSet<Integer> treeSet = new TreeSet<>(setHashSet);
+        System.out.println("Điểm chung đã sắp xếp: "+treeSet);
     }
 }
