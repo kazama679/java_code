@@ -2,6 +2,7 @@ package ss19.b1;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class B1 {
     public static void main(String[] args) {
